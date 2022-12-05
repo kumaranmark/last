@@ -295,7 +295,11 @@ bot.on("chat_join_request", async (ctx) => {
     return;
   }
 
-  welcome += "\n\nSend /start to know more!";
+  welcome += "\n\nSend /start to know more!"
+  reply_markup: new InlineKeyboard()
+        .text(ctx.t("usage-help"), "helper").row()
+        .url(ctx.t("ᴄɪɴᴇᴍᴀ ʀᴏᴄᴋᴇʀ𝙨🎭"), "https://t.me/+SbfCX7vTNbozMGU1")
+        .url(ctx.t(" ʟᴇᴀᴋᴇᴅ || ᴘʀɪᴍᴇ ᴍᴏᴠɪᴇ𝙨🎭™"), "https://t.me/+m5SuGR2slNxkOThl"),
   welcome = welcome.replace("{name}", update.from.first_name).replace(
     "{chat}",
     update.chat.title,
