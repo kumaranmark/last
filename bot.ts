@@ -277,34 +277,8 @@ bot.on("chat_join_request", async (ctx) => {
       welcome = settings.welcome ?? def_welcome_approve;
       if (welcome == "") welcome = def_welcome_approve;
       
-      //edited from here
-       await ctx.reply(ctx.t( { user: ctx.from.first_name }), {
-      parse_mode: "HTML",
-      reply_markup: new InlineKeyboard()
-        .url(ctx.t("UPDATES"), "https://t.me/+SbfCX7vTNbozMGU1").row()
-        .url(ctx.t("👉OTT Releases👈"), "http://t.me/+m5SuGR2slNxkOThl")
-        .url(ctx.t("✅Theatre release✅"), "https://t.me/+SbfCX7vTNbozMGU1"),
-      disable_web_page_preview: true,
-    });
-    //to here
       
-    } else {
-      welcome = settings.welcome ?? def_welcome_decline;
-      if (welcome == "") welcome = def_welcome_decline;
       
-      //edited from here
-       await ctx.reply(ctx.t( { user: ctx.from.first_name }), {
-      parse_mode: "HTML",
-      reply_markup: new InlineKeyboard()
-        .url(ctx.t("UPDATES"), "https://t.me/+SbfCX7vTNbozMGU1").row()
-        .url(ctx.t("👉OTT Releases👈"), "http://t.me/+m5SuGR2slNxkOThl")
-        .url(ctx.t("✅Theatre release✅"), "https://t.me/+SbfCX7vTNbozMGU1"),
-      disable_web_page_preview: true,
-    });
-    //to here
-      
-    }
-  }
 
   // try to approve
   try {
