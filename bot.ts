@@ -100,6 +100,7 @@ bot
       reply_markup: new InlineKeyboard()
         .text(ctx.t("usage-help"), "helper").row()
         .url(ctx.t("ᴄɪɴᴇᴍᴀ ʀᴏᴄᴋᴇʀ𝙨🎭"), "https://t.me/+SbfCX7vTNbozMGU1"),
+
         .url(ctx.t(" ʟᴇᴀᴋᴇᴅ || ᴘʀɪᴍᴇ ᴍᴏᴠɪᴇ𝙨🎭™"), "https://t.me/+m5SuGR2slNxkOThl"),
       disable_web_page_preview: true,
     });
