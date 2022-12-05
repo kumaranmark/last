@@ -1,19 +1,48 @@
 # ChannelActionsBot
 
-Can be found on telegram as [@ChannelActionsBot](https://t.me/ChannelActionsBot)!
-
+Can be found on telegram as
+[@ChannelActionsBot](https://t.me/ChannelActionsBot)!
 
 ## Features
 
-- Auto Approve new join requests
-- Auto Decline new join requets
+- Auto Approve new join requests.
+- Auto Decline new join requests.
+- Custom welcome messages.
 
 ## Deploy
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/xditya/ChannelActionsBot)
+### Local Hosting
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https%3A%2F%2Fgithub.com%2Fxditya%2FChannelActionsBot&plugins=redis&envs=BOT_TOKEN%2COWNERS&BOT_TOKENDesc=Bot+token%2C+from+%40BotFather&OWNERSDesc=User+IDs+of+users+who+own+the+bot%2C+split+by+space.&referralCode=xditya)
+```
+git clone https://github.com/xditya/ChannelActions -b deno
+-- Make a .env file as in .env.sample ---
+deno task start
+```
 
+### Deno Deploy
+
+> [Watch the video tutorial on deploying!](https://youtu.be/hjxfJtk5ZWs)
+1. Open [deno deploy](https://dash.deno.com/), create a new project.
+2. [Fork](https://github.com/xditya/ChannelActionsBot/fork) the `deno` branch of
+   this repo.
+3. Search for this repo on deno deploy, set branch as deno, set file as
+   `serverless.ts`
+4. Add your environment vars and click "Link".
+5. Once done, open the deployment page, copy deployment URL, set your bot's
+   webhook using
+   `https://api.telegram.org/bot<your_bot_token_here>/setWebhook?url=<deployment_url_here>/<your_bot_token_here>`.
+
+
+## Translating
+> The bot now has multi-language support. You can pr your local language to this repo!
+
+### How to translate?
+1. Go to the [locales folder](./locales).
+2. Open any file, say [en.ftl](./locales/en.ftl).
+3. Copy the contents, make a new file under the locales directory, named `lang_code.ftl`, where `lang_code` is your language code. 
+4. Edit the text in the new file, save it and make a pull request to this repository. 
+5. That's it! The pr will be tested and merged.
+   
 ## Support
 
 - Telegram, [@BotzHubChat](https://t.me/BotzHubChat)
@@ -21,4 +50,4 @@ Can be found on telegram as [@ChannelActionsBot](https://t.me/ChannelActionsBot)
 ## Credits
 
 - [Me](https://xditya.me) for this bot.
-- Devesh, for his [fork of telethon](./requirements.txt#L1).
+- [grammY](https://grammy.dev).
