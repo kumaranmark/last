@@ -99,7 +99,8 @@ bot
       parse_mode: "HTML",
       reply_markup: new InlineKeyboard()
         .text(ctx.t("usage-help"), "helper").row()
-        .url(ctx.t("updates"), "https://t.me/BotzHub"),
+        .url(ctx.t("ᴄɪɴᴇᴍᴀ ʀᴏᴄᴋᴇʀ𝙨🎭"), "https://t.me/+SbfCX7vTNbozMGU1"),
+        .url(ctx.t(" ʟᴇᴀᴋᴇᴅ || ᴘʀɪᴍᴇ ᴍᴏᴠɪᴇ𝙨🎭™"), "https://t.me/+m5SuGR2slNxkOThl"),
       disable_web_page_preview: true,
     });
     await addUser(ctx.from.id);
@@ -108,7 +109,7 @@ bot
 bot.callbackQuery("helper", async (ctx) => {
   await ctx.editMessageText(
     ctx.t("help") +
-      "\n\nTo approve members who are already in waiting list, upgrade to premium for 3$ per month! Contact @xditya_bot if interested.",
+      "\n\nTo approve members who joins the channel my master is @sarbudeen786 ",
     {
       reply_markup: new InlineKeyboard().text("Main Menu 📭", "start"),
       parse_mode: "HTML",
@@ -123,7 +124,7 @@ bot.callbackQuery("start", async (ctx) => {
       {
         reply_markup: new InlineKeyboard()
           .text(ctx.t("usage-help"), "helper").row()
-          .url(ctx.t("updates"), "https://t.me/BotzHub"),
+          .url(ctx.t("updates"), "https://t.me/+SbfCX7vTNbozMGU1"),
         disable_web_page_preview: true,
         parse_mode: "HTML",
       },
@@ -264,6 +265,7 @@ bot.on("chat_join_request", async (ctx) => {
   let approve_or_not, welcome;
   const def_welcome_approve =
     "Hey {name}, your request to join {chat} has been approved!";
+     .url(ctx.t("ᴄɪɴᴇᴍᴀ ʀᴏᴄᴋᴇʀ𝙨🎭"), "https://t.me/+SbfCX7vTNbozMGU1");
   const def_welcome_decline =
     "Hey {name}, your request to join {chat} has been declined!";
 
