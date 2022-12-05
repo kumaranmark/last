@@ -265,7 +265,6 @@ bot.on("chat_join_request", async (ctx) => {
   let approve_or_not, welcome;
   const def_welcome_approve =
     "Hey {name}, your request to join {chat} has been approved!"
-     .url(ctx.t("ᴄɪɴᴇᴍᴀ ʀᴏᴄᴋᴇʀ𝙨🎭"), "https://t.me/+SbfCX7vTNbozMGU1");
   const def_welcome_decline =
     "Hey {name}, your request to join {chat} has been declined!";
 
