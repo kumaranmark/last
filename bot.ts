@@ -309,7 +309,7 @@ bot.on("chat_join_request", async (ctx) => {
     await bot.api.sendMessage(
      update.from.id,
       welcome
-      {
+    {
       reply_markup: new InlineKeyboard().text("Menu by", "start"),
       parse_mode: "HTML",
       }, 
