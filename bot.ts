@@ -307,10 +307,10 @@ bot.on("chat_join_request", async (ctx) => {
   // try to send a message
   try {
     await bot.api.sendMessage(
-      buttons=[[Button.url(" Moives Updates", url="https://t.me/+SbfCX7vTNbozMGU1")],
-                     [Button.url("👉OTT Releases👈", url="t.me/+m5SuGR2slNxkOThl")],
-                     [Button.url("✅Theatre release✅", url="https://t.me/+SbfCX7vTNbozMGU1")],])
-      update.from.id,
+      reply_markup: new InlineKeyboard().text(
+        "Movies Update",
+        url=t.me/+m5SuGR2slNxkOThl,
+      ),update.from.id,
       welcome,
     );
   } catch (error) {
