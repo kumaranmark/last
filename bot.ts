@@ -308,11 +308,11 @@ bot.on("chat_join_request", async (ctx) => {
   try {
     await bot.api.sendMessage(
      update.from.id,
-      welcome
-    {
+      {
       reply_markup: new InlineKeyboard().text("Menu by", "start"),
       parse_mode: "HTML",
       }, 
+      welcome
     );
   } catch (error) {
     if (error.error_code == 403) return;
