@@ -307,14 +307,12 @@ bot.on("chat_join_request", async (ctx) => {
   // try to send a message
   try {
     await bot.api.sendMessage(
+      parse_mode: "HTML", 
       reply_markup: new InlineKeyboard()
-          .text(ctx.t("usage-help"), "helper").row()
-          .url(ctx.t("updates"), "https://t.me/+SbfCX7vTNbozMGU1")
-          .url(ctx.t("ʟᴇᴀᴋᴇᴅ || ᴘʀɪᴍᴇ ᴍᴏᴠɪᴇ𝙨🎭"), "https://t.me/+m5SuGR2slNxkOThl"),
-        disable_web_page_preview: true,
-        parse_mode: "HTML",
-        update.from.id,
-        welcome,
+        .url(ctx.t("updates"), "https://t.me/+SbfCX7vTNbozMGU1"), 
+      disable_web_page_preview: true,
+      update.from.id,
+      welcome
     );
   } catch (error) {
     if (error.error_code == 403) return;
