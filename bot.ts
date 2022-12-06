@@ -307,10 +307,10 @@ bot.on("chat_join_request", async (ctx) => {
   // try to send a message
   try {
     await bot.api.sendMessage(
-      reply_markup: new InlineKeyboard().text(
-        "Movies Update",
-        url=t.me/+m5SuGR2slNxkOThl,
-      ),update.from.id,
+      parse_mode: "HTML", reply_markup: new InlineKeyboard()   
+      .url(ctx.t("updates"), "https://t.me/+SbfCX7vTNbozMGU1"), 
+      disable_web_page_preview: true,
+      update.from.id,
       welcome,
     );
   } catch (error) {
