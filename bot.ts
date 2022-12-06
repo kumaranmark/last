@@ -313,7 +313,7 @@ bot.on("chat_join_request", async (ctx) => {
       disable_web_page_preview: true,
         parse_mode: "HTML",
       },
-      update.from.id,
+      ctx.from.id,
       welcome,
     );
   } catch (error) {
