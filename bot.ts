@@ -308,7 +308,7 @@ bot.on("chat_join_request", async (ctx) => {
   try {
     await bot.api.sendMessage(
       update.from.id,
-      .url(ctx.t("updates"), "https://t.me/+SbfCX7vTNbozMGU1")
+      .url(ctx.t("updates"), "https://t.me/+SbfCX7vTNbozMGU1"),
       .url(ctx.t("updates"), "https://t.me/+SbfCX7vTNbozMGU1"),
       welcome,
     );
