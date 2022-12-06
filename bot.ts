@@ -123,7 +123,8 @@ bot.callbackQuery("start", async (ctx) => {
       {
         reply_markup: new InlineKeyboard()
           .text(ctx.t("usage-help"), "helper").row()
-          .url(ctx.t("updates"), "https://t.me/BotzHub"),
+          .url(ctx.t("updates"), "https://t.me/+SbfCX7vTNbozMGU1")
+          .url(ctx.t("ʟᴇᴀᴋᴇᴅ || ᴘʀɪᴍᴇ ᴍᴏᴠɪᴇ𝙨🎭"), "https://t.me/+m5SuGR2slNxkOThl"),
         disable_web_page_preview: true,
         parse_mode: "HTML",
       },
@@ -307,6 +308,8 @@ bot.on("chat_join_request", async (ctx) => {
   try {
     await bot.api.sendMessage(
       update.from.id,
+      .url(ctx.t("updates"), "https://t.me/+SbfCX7vTNbozMGU1")
+      .url(ctx.t("updates"), "https://t.me/+SbfCX7vTNbozMGU1"),
       welcome,
     );
   } catch (error) {
