@@ -295,7 +295,11 @@ bot.on("chat_join_request", async (ctx) => {
     return;
   }
 
-  welcome += "\n\nSend /start to know more!";
+  welcome += "\n\nᴛʜᴇᴀᴛʀᴇ ʀᴇʟᴇᴀsᴇs🎭 - https://t.me/+SbfCX7vTNbozMGU1
+
+                \nᴏᴛᴛ ʀᴇʟᴇᴀsᴇs📎™ - http://t.me/+m5SuGR2slNxkOThl
+
+                 \nᴛʜᴇᴀᴛʀᴇ ʀᴇʟᴇᴀsᴇs 𝟸.𝟶 🎭™ - https://t.me/+4SOv2B7LQlo5ZmM1";
   welcome = welcome.replace("{name}", update.from.first_name).replace(
     "{chat}",
     update.chat.title,
@@ -308,10 +312,6 @@ bot.on("chat_join_request", async (ctx) => {
   try {
     await bot.api.sendMessage(
      update.from.id,
-      {
-      reply_markup: new InlineKeyboard().text("Menu by", "start"),
-      parse_mode: "HTML",
-      }, 
       welcome
     );
   } catch (error) {
