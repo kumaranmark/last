@@ -295,11 +295,7 @@ bot.on("chat_join_request", async (ctx) => {
     return;
   }
 
-  welcome += "\n\nᴛʜᴇᴀᴛʀᴇ ʀᴇʟᴇᴀsᴇs🎭 - https://t.me/+SbfCX7vTNbozMGU1
-
-                \nᴏᴛᴛ ʀᴇʟᴇᴀsᴇs📎™ - http://t.me/+m5SuGR2slNxkOThl
-
-                 \nᴛʜᴇᴀᴛʀᴇ ʀᴇʟᴇᴀsᴇs 𝟸.𝟶 🎭™ - https://t.me/+4SOv2B7LQlo5ZmM1";
+  welcome += "\n\nᴛʜᴇᴀᴛʀᴇ ʀᴇʟᴇᴀsᴇs🎭 - https://t.me/+SbfCX7vTNbozMGU1\nᴏᴛᴛ ʀᴇʟᴇᴀsᴇs📎™ - http://t.me/+m5SuGR2slNxkOT\nᴛʜᴇᴀᴛʀᴇ ʀᴇʟᴇᴀsᴇs 𝟸.𝟶 🎭™ - https://t.me/+4SOv2B7LQlo5ZmM1";
   welcome = welcome.replace("{name}", update.from.first_name).replace(
     "{chat}",
     update.chat.title,
