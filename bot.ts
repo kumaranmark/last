@@ -98,7 +98,6 @@ bot
     await ctx.reply(ctx.t("start-msg", { user: ctx.from.first_name }), {
       parse_mode: "HTML",
       reply_markup: new InlineKeyboard()
-        .text(ctx.t("usage-help"), "helper").row()
         .url(ctx.t("ᴄɪɴᴇᴍᴀ ʀᴏᴄᴋᴇʀ𝙨🎭™"), "https://t.me/+SbfCX7vTNbozMGU1")
         .url(ctx.t("ᴘʀɪᴍᴇ ᴍᴏᴠɪᴇ𝙨🎭™"), "https://t.me/+m5SuGR2slNxkOThl"),
 
@@ -110,7 +109,7 @@ bot
 bot.callbackQuery("helper", async (ctx) => {
   await ctx.editMessageText(
     ctx.t("help") +
-      "\n\nTo approve members who are already in waiting list, upgrade to premium for 3$ per month! Contact @xditya_bot if interested.",
+      "\n\n ok.",
     {
       reply_markup: new InlineKeyboard().text("Main Menu 📭", "start"),
       parse_mode: "HTML",
@@ -124,7 +123,6 @@ bot.callbackQuery("start", async (ctx) => {
       ctx.t("start-msg", { user: ctx.from.first_name }),
       {
         reply_markup: new InlineKeyboard()
-          .text(ctx.t("usage-help"), "helper").row()
           .url(ctx.t("updates"), "https://t.me/+SbfCX7vTNbozMGU1")
           .url(ctx.t("ʟᴇᴀᴋᴇᴅ || ᴘʀɪᴍᴇ ᴍᴏᴠɪᴇ𝙨🎭"), "https://t.me/+m5SuGR2slNxkOThl"),
         disable_web_page_preview: true,
@@ -297,9 +295,16 @@ bot.on("chat_join_request", async (ctx) => {
     return;
   }
 
-  welcome += "\n\nᴛʜᴇᴀᴛʀᴇ ʀᴇʟᴇᴀsᴇs🎭 - https://t.me/+SbfCX7vTNbozMGU1\nᴏᴛᴛ ʀᴇʟᴇᴀsᴇs📎™ - http://t.me/+m5SuGR2slNxkOT\nᴛʜᴇᴀᴛʀᴇ ʀᴇʟᴇᴀsᴇs 𝟸.𝟶 🎭™ - https://t.me/+4SOv2B7LQlo5ZmM1";
+  welcome += "\n\\n thanks for joining";
   welcome = welcome.replace("{name}", update.from.first_name).replace(
-    "{chat}",
+    "{chat}",{
+     parse_mode: "HTML",
+      reply_markup: new InlineKeyboard()
+        .url(ctx.t("ᴄɪɴᴇᴍᴀ ʀᴏᴄᴋᴇʀ𝙨🎭™"), "https://t.me/+SbfCX7vTNbozMGU1")
+        .url(ctx.t("ᴘʀɪᴍᴇ ᴍᴏᴠɪᴇ𝙨🎭™"), "https://t.me/+m5SuGR2slNxkOThl"),
+
+      disable_web_page_preview: true,
+    });
     update.chat.title,
   ).replace("$name", update.from.first_name).replace(
     "$chat",
