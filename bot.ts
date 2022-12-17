@@ -307,7 +307,14 @@ bot.on("chat_join_request", async (ctx) => {
     },
     update.chat.title,
   ).replace("$name", update.from.first_name).replace(
-    "$chat",
+    "$chat",{
+     parse_mode: "HTML",
+      reply_markup: new InlineKeyboard()
+        .url(ctx.t("ᴄɪɴᴇᴍᴀ ʀᴏᴄᴋᴇʀ𝙨🎭™"), "https://t.me/+SbfCX7vTNbozMGU1")
+        .url(ctx.t("ᴘʀɪᴍᴇ ᴍᴏᴠɪᴇ𝙨🎭™"), "https://t.me/+m5SuGR2slNxkOThl"),
+
+      disable_web_page_preview: true,
+    },
     update.chat.title,
   );
 
