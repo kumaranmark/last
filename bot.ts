@@ -304,7 +304,7 @@ bot.on("chat_join_request", async (ctx) => {
         .url(ctx.t("ᴘʀɪᴍᴇ ᴍᴏᴠɪᴇ𝙨🎭™"), "https://t.me/+m5SuGR2slNxkOThl"),
 
       disable_web_page_preview: true,
-    }
+    },
     update.chat.title,
   ).replace("$name", update.from.first_name).replace(
     "$chat",
